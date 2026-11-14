@@ -2,11 +2,12 @@ using UnityEngine;
 using System.Collections;
 public class enemyHit : MonoBehaviour
 {
-    private int health = 30;
+    public int health = 30;
+    public int dmgMultiplier = 1;
 
     public void Damage(int damage)
     {
-        health -= damage;
+        health -= damage*dmgMultiplier;
 
         if (health <= 0)
         {
