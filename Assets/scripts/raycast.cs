@@ -46,12 +46,12 @@ public class raycast : MonoBehaviour
             
             fireRate = 0.5f;
             ammo--;
-            Debug.Log(ammo);
+
         }
         if (Input.GetKeyDown(KeyCode.R) && ammo < maxAmmo)
         {
             ammo += maxAmmo - ammo;
-            Debug.Log(ammo);
+
         }
     }
 }

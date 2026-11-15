@@ -8,9 +8,14 @@ public class enemyHit : MonoBehaviour
     public void Damage(int damage)
     {
         health -= damage*dmgMultiplier;
+        
+        
 
         if (health <= 0)
         {
+
+            oneData.score += 10;
+            Debug.Log(oneData.score);
             gameObject.SetActive(false);
         }
     }
