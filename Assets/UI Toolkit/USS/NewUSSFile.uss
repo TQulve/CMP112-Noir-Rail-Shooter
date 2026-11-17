@@ -1,0 +1,16 @@
+VisualElement {
+}
+
+Button:hover {
+    transition-property: all;
+    transition-timing-function: ease-in-out-sine;
+    scale: 1 1;
+    font-size: 12px;
+    transition-duration: 1s;
+    -unity-text-auto-size: best-fit 10px 100px;
+    transition-delay: 0s;
+    -unity-text-generator: advanced;
+    -unity-font-definition: initial;
+    translate: 0 0;
+    cursor: initial;
+}
