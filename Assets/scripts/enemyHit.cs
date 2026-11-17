@@ -21,7 +21,7 @@ public class enemyHit : MonoBehaviour
         {
 
             oneData.score += 10;
-            Debug.Log(oneData.score);
+            oneData.cigScore += 10;
             gameObject.SetActive(false);
         }
     }
