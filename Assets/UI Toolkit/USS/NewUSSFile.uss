@@ -14,3 +14,6 @@ Button:hover {
     translate: 0 0;
     cursor: initial;
 }
+
+.Crosshair {
+}
