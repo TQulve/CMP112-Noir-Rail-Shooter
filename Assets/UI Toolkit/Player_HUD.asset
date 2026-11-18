@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 19101, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Player_HUD
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.PanelSettings
-  themeUss: {fileID: -4733365628477956816, guid: dc085b129378c414c9e9cdb8978ccc9e, type: 3}
+  themeUss: {fileID: 4413694071827464959, guid: 7a30e46e87fa0ee449eb6d0174868555, type: 3}
   m_DisableNoThemeWarning: 0
   m_TargetTexture: {fileID: 0}
   m_RenderMode: 0
@@ -26,10 +26,10 @@ MonoBehaviour:
   m_FallbackDpi: 96
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_Match: 0
+  m_Match: 1
   m_SortingOrder: 0
   m_TargetDisplay: 0
-  m_BindingLogLevel: 0
+  m_BindingLogLevel: 1
   m_ClearDepthStencil: 1
   m_ClearColor: 0
   m_ColorClearValue: {r: 0, g: 0, b: 0, a: 0}

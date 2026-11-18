@@ -1,0 +1,12 @@
+VisualElement {
+}
+
+Button:hover {
+    translate: 0 0%;
+    scale: 1 1.2;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out-circ;
+    transition-property: all;
+    transition-delay: 0s;
+    background-image: none;
+}
