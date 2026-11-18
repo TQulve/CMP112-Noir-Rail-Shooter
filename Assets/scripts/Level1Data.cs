@@ -8,4 +8,6 @@ public static class oneData
     public static int currentMove = 1;
     public static bool needCig = false;
 
+    public static int flag = 0;
+
 }

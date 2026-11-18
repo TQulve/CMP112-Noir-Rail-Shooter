@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 
 public class cigarette : MonoBehaviour
 {
-    private float cigTime = 2;
-    private int ciggs = 15;
+    private float cigTime = 10f;
+    private int ciggs = 2;
+    public TextMeshProUGUI ciggHud;
     void Start()
     {
         
@@ -12,7 +14,7 @@ public class cigarette : MonoBehaviour
     
     void Update()
     {
-
+        textHud();
 
         if (cigTime > 0)
         {
@@ -35,8 +37,12 @@ public class cigarette : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && ciggs > 0)
         {
             ciggs--;
-            cigTime = 45;
+            cigTime = 10f;
             
         }
+    }
+    public void textHud()
+    {
+        ciggHud.text = "ciggarettes: " + ciggs.ToString();
     }
 }

@@ -13,6 +13,7 @@ public class enemyHit : MonoBehaviour
 
         // take away damage as given by whatever calls the function [might remove damage multiplier]
         health -= damage*dmgMultiplier;
+        Debug.Log("hit");
         
         
 
@@ -22,7 +23,7 @@ public class enemyHit : MonoBehaviour
 
             oneData.score += 10;
             oneData.cigScore += 10;
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

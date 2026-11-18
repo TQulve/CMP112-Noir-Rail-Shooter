@@ -1,10 +1,13 @@
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class playerMove : MonoBehaviour
 {
     //variables
     int currentPoint = 0;
     public float speed = 3f;
+
+    private float moveTimer = 0f;
     public Transform playerCamera;
     private float cameraPitch;
     private CharacterController controller;
@@ -21,6 +24,20 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
+        // move timer
+        if (moveTimer > 0f)
+        {
+            moveTimer -= Time.deltaTime;
+
+        }
+        if (moveTimer <= 0f && oneData.flag < 2)
+        {
+            moveTimer = 30f;
+            oneData.flag += 1;
+        }
+
         //lock the cursor in place
         Cursor.lockState = CursorLockMode.Locked;
         //hide it also
@@ -28,15 +45,16 @@ public class playerMove : MonoBehaviour
         Look();
 
         //movement points
-        if (oneData.score < 50) {
-            move(new Vector3(2, 2, 0));
-        }
-        if (oneData.score == 50)
-        {
+        if (oneData.flag == 1) {
+            move(new Vector3(3.34f, 3.25f, 2.76f));
 
-            move(new Vector3(15, 2, 0));
         }
-       
+        if (oneData.flag == 2)
+        {
+            move(new Vector3(4.946f, 3.25f, -29.001f));
+        }
+
+        Debug.Log(oneData.flag);
     }
 
 
@@ -82,4 +100,6 @@ public class playerMove : MonoBehaviour
         }
         
     }
+
+
 }

@@ -3,8 +3,8 @@ using System.Collections;
 
 public class enemyMove : MonoBehaviour
 {
-    private float time = 3;
-    private float moveSpd = 0.01f;
+    private float time = 3f;
+    private float moveSpd = 0.08f;
     private Transform player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,11 +21,24 @@ public class enemyMove : MonoBehaviour
             transform.LookAt(player);
             transform.position += new Vector3(moveSpd, 0f, 0f);
         }
+
+        if (transform.position.x >= 25f)
+        {
+            Destroy(gameObject);
+        }
     }
     public IEnumerator CountDown()
     {
         yield return new WaitForSeconds(time);
-        moveSpd *= 0.8f;
+        
+        if (transform.position.x < -34f)
+        {
+            moveSpd = 0f;
+        }
+        else
+        {
+            moveSpd *= 0.8f;
+        }
         StartCoroutine("CountDown");
 
 

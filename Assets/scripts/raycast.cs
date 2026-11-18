@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using TMPro;
 public class raycast : MonoBehaviour
 {
 
@@ -12,6 +14,11 @@ public class raycast : MonoBehaviour
     private int ammo = 10;
     private int maxAmmo = 10;
 
+    public TextMeshProUGUI ammoHud;
+    public TextMeshProUGUI pointsHud;
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +28,7 @@ public class raycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        textHud();
         // firerate timer
         if (fireRate > 0f)
         {
@@ -74,8 +82,11 @@ public class raycast : MonoBehaviour
         }
     }
 
-    int ammo_count()
+    public void textHud()
     {
-        return ammo;
+        ammoHud.text = "ammo: " + ammo.ToString() + "/" + "10";
+        pointsHud.text = "points: " + oneData.score.ToString();
     }
+
+
 }
