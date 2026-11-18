@@ -5,6 +5,7 @@ public class raycast : MonoBehaviour
 
     //variables
     public Ray RayOrigin;
+
     private RaycastHit HitInfo;
     public Transform cameraTransform;
     private float fireRate = 0f;
@@ -71,5 +72,10 @@ public class raycast : MonoBehaviour
             ammo += maxAmmo - ammo;
 
         }
+    }
+
+    int ammo_count()
+    {
+        return ammo;
     }
 }
