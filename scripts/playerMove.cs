@@ -28,10 +28,10 @@ public class playerMove : MonoBehaviour
         Look();
 
         //movement points
-        if (oneData.score < 20) {
+        if (oneData.score < 50) {
             move(new Vector3(2, 2, 0));
         }
-        if (oneData.score == 20)
+        if (oneData.score == 50)
         {
 
             move(new Vector3(15, 2, 0));
